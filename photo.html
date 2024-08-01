@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="icon" href="https://cdn.pixabay.com/photo/2021/03/23/09/01/webcam-6116845_1280.png" type="image/x-icon">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="static/css/style.css">
+    <title>Photo Detection</title>
+    <style>
+        html {
+            background: linear-gradient(135deg, #ff7e5f, #feb47b, #ff6e7f, #bfe9ff);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            color: ;
+            height: 100%;
+            margin: 0;
+            font-family: 'Lato', sans-serif;
+        }
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+        .header {
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-family: 'EB Garamond', serif;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            color: #ffeaa7;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 10px 20px;
+            border-radius: 15px;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        img {
+            width: 80vw;
+            height: 80vh;
+            border: 2px solid #ffeaa7;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+        }
+        button {
+            border: 0;
+            background: #ff6e7f;
+            background: linear-gradient(to right, #ff6e7f, #bfe9ff);
+            color: #f7f1e3;
+            cursor: pointer;
+            font: inherit;
+            margin: 0.5em;
+            padding: 10px 20px;
+            transition: background 0.5s, transform 0.2s;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+        button:hover {
+            background: linear-gradient(to right, #bfe9ff, #ff6e7f);
+            transform: translateY(-2px);
+        }
+        
+    
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="/"><button>Home</button></a>
+        <h2>Age and Gender detection from Photo</h2>
+    </div>
+    <div class="container">   
+        <img src="{{ url_for('upload_file') }}" alt="Upload an image for detection">
+    </div>
+</body>
+</html>

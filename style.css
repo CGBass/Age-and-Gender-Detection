@@ -1,0 +1,153 @@
+body,h1,h2,h3,h4,h5,h6 {
+  font-family: "Lato", sans-serif;
+}
+body, html {
+  height: 100%;
+  color: #777;
+  line-height: 1.8;
+}
+
+/* Create a Parallax Effect */
+.bgimg {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg {
+  background-image: url('../assets/face.jpg');
+  min-height: 100%;
+}
+
+.aj-wide {letter-spacing: 10px;}
+.aj-hover-opacity {cursor: pointer;}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1600px) {
+  .bgimg {
+    background-attachment: scroll;
+    min-height: 400px;
+  }
+}
+
+.hr{
+  height:2px;
+  width: 300px;
+  background:rgba(255,255,255,.2);
+}
+
+th {padding-left: 10px;}
+
+/* action */
+
+*,:after,:before{box-sizing:border-box}
+.clearfix:after,.clearfix:before{content:'';display:table}
+.clearfix:after{clear:both;display:block}
+
+.action-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+.action-html {
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+}
+
+.action-html .tab {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+  background-color: #ddd;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.action-html .tab:hover {
+  background-color: #bbb;
+}
+
+.action-html .group {
+  margin-top: 20px;
+}
+
+.action-html input[type="radio"] {
+  display: none;
+}
+
+.action-html input[type="radio"]:checked + .tab {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 20px 0;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #45a049;
+}
+.aj-content {
+  padding: 64px 20px;
+  text-align: center;
+}
+footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+
+        footer a {
+            color: lightgrey;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+        .live-htm, .photo-htm {
+            display: none;
+        }
+
+        input#tab-1:checked ~ .action-form .live-htm,
+        input#tab-2:checked ~ .action-form .photo-htm {
+            display: block;
+        }
+
+        .group img {
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+
+        .group input[type="file"] {
+            display: block;
+            margin: 20px auto;
+        }
+
+        .group input[type="submit"] {
+            margin-top: 20px;
+        }
